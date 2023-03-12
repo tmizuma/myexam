@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'org.springframework.boot' version '3.0.1'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'com.google.cloud.tools.jib' version "3.3.1"
+}
+
+group = 'com.myexam'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    // SpringBoot - Java AWS SDK 2 DynamoDB Enhanced Client and devtools problem
+    // https://stackoverflow.com/questions/61556638/springboot-java-aws-sdk-2-dynamodb-enhanced-client-and-devtools-problem/64350067#64350067
+    // developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.projectlombok:lombok'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.0.2'
+    implementation group: 'com.authlete', name: 'authlete-java-common', version: '3.49'
+    implementation group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.3'
+    implementation "org.springframework.security:spring-security-web"
+    implementation "org.springframework.security:spring-security-config"
+    implementation 'com.auth0:java-jwt:4.2.2'
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+    implementation(platform("software.amazon.awssdk:bom:2.18.10"))
+    implementation("software.amazon.awssdk:dynamodb")
+    implementation("software.amazon.awssdk:dynamodb-enhanced")
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+jib {
+    to {
+        image = "myexam"
+    }
+}

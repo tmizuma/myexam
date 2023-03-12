@@ -1,0 +1,15 @@
+env: base
+
+server:
+  port: 8080
+
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+
+aws:
+  dynamodb:
+    endpoint: ${DYNAMODB_ENDPOINT}
+    region: ${DYNAMODB_REGION}

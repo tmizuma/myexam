@@ -1,0 +1,6 @@
+[*.{groovy,java,kt,xml}]
+indent_style = space
+end_of_line = lf
+charset = utf-8
+continuation_indent_size = 8
+root=true

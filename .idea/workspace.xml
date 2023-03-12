@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bbcd63a4-1d08-4a44-8926-209ea81cb47b" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="auth" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectId" id="2JWUcAc1V2bT3TR8C6edfU9021d" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/takuya.mizuma/dev/springboot",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "aws",
+    "spring.configuration.checksum": "6991cd242c7d4e036e762997dc1903e8",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/idea/auth/domain/usecase/impl" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/idea/auth/domain/usecase/contract" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.idea.auth" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.idea.auth.domain.service.impl.account.domain.service.authentication" />
+      <recent name="com.idea.auth.domain.service.impl.account.domain.object" />
+      <recent name="com.idea.auth.domain.exception.account" />
+      <recent name="com.idea.auth.domain.service.impl.account.domain.service" />
+      <recent name="com.idea.auth.domain.service.impl.account" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.IdeaAuthServerApplication">
+    <configuration name="AuthorizationServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.idea.auth.domain.usecase.AuthorizationServiceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'auth.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'com.idea.auth.domain.usecase'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.idea.auth.domain.usecase.*&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="IdeaAuthServerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="com.idea.auth.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.idea.auth.IdeaAuthServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IdeaAuthServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="local" />
+      <module name="auth.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.idea.auth.IdeaAuthServerApplication" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.AuthorizationServiceTest" />
+      <item itemvalue="Gradle.Tests in 'auth.test'" />
+      <item itemvalue="Gradle.Tests in 'com.idea.auth.domain.usecase'" />
+      <item itemvalue="Spring Boot.IdeaAuthServerApplication (1)" />
+      <item itemvalue="Spring Boot.IdeaAuthServerApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Tests in 'auth.test'" />
+        <item itemvalue="Gradle.Tests in 'com.idea.auth.domain.usecase'" />
+        <item itemvalue="Gradle.AuthorizationServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bbcd63a4-1d08-4a44-8926-209ea81cb47b" name="Changes" comment="" />
+      <created>1672193411742</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672193411742</updated>
+      <workItem from="1672193415236" duration="11309000" />
+      <workItem from="1672274592384" duration="228000" />
+      <workItem from="1672274990635" duration="585000" />
+      <workItem from="1672383567410" duration="4292000" />
+      <workItem from="1672702587377" duration="848000" />
+      <workItem from="1672956561282" duration="29112000" />
+      <workItem from="1673103726307" duration="10918000" />
+      <workItem from="1673403745703" duration="5000" />
+      <workItem from="1673403786969" duration="17084000" />
+      <workItem from="1673501636385" duration="31070000" />
+      <workItem from="1673600864880" duration="7272000" />
+      <workItem from="1673625189292" duration="223000" />
+      <workItem from="1673625911359" duration="10389000" />
+      <workItem from="1673889391798" duration="20496000" />
+      <workItem from="1674146055134" duration="900000" />
+      <workItem from="1674246604027" duration="565000" />
+      <workItem from="1674247173889" duration="628000" />
+      <workItem from="1674263188303" duration="362000" />
+      <workItem from="1674538180587" duration="12000" />
+      <workItem from="1674538251750" duration="1361000" />
+      <workItem from="1674614603441" duration="38988000" />
+      <workItem from="1674701976548" duration="599000" />
+      <workItem from="1675399232935" duration="745000" />
+      <workItem from="1675871690121" duration="4392000" />
+      <workItem from="1676304448523" duration="803000" />
+      <workItem from="1676477404703" duration="1387000" />
+      <workItem from="1676523028985" duration="30000" />
+      <workItem from="1676527444578" duration="8261000" />
+      <workItem from="1676537915908" duration="895000" />
+      <workItem from="1676540524984" duration="13900000" />
+      <workItem from="1676883940622" duration="35000" />
+      <workItem from="1678069423020" duration="15469000" />
+      <workItem from="1678238186159" duration="127000" />
+      <workItem from="1678238328611" duration="1368000" />
+      <workItem from="1678239746154" duration="42000" />
+      <workItem from="1678239817096" duration="11778000" />
+      <workItem from="1678259579318" duration="46665000" />
+      <workItem from="1678613006397" duration="378000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.authlete.common.dto.AuthorizationIssueResponse" memberName="resultMessage" />
+        <PinnedItemInfo parentTag="com.authlete.common.dto.TokenResponse" memberName="responseContent" />
+        <PinnedItemInfo parentTag="com.authlete.common.dto.AuthorizationIssueResponse" memberName="authorizationCode" />
+        <PinnedItemInfo parentTag="com.idea.auth.domain.model.authlete.AuthorizationHandler$MockitoMock$V2u3NbnX" memberName="mockitoInterceptor" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/auth$IdeaAuthServerApplication.ic" NAME="IdeaAuthServerApplication Coverage Results" MODIFIED="1672965355043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
