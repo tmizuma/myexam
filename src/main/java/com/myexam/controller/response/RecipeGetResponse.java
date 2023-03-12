@@ -5,8 +5,10 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class RecipeListResponse {
+public class RecipeGetResponse {
 
-  List<Recipe> recipes;
+  String message;
+
+  List<Recipe> recipe;
 
 }

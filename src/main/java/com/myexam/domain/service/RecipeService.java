@@ -1,6 +1,6 @@
 package com.myexam.domain.service;
 
-import com.myexam.domain.repositories.entity.RecipeEntity;
+import com.myexam.model.Recipe;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +13,7 @@ public interface RecipeService {
 
   public void delete();
 
-  List<RecipeEntity> list();
+  List<Recipe> list();
 
-  public void getById();
-
+  List<Recipe> getById(Long id);
 }

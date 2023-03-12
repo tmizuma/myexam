@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbcd63a4-1d08-4a44-8926-209ea81cb47b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/RecipeController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/RecipePostRequest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/RecipeDeleteResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/RecipeListResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/RecipeGetResponse.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/RecipePatchResponse.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/RecipePostResponse.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/domain/repositories/RecipeRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/domain/repositories/entity/RecipeEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/RecipeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/RecipeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/model/Recipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
@@ -40,6 +38,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/AuthorizationController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/HealthCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/HealthCheckController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/IntrospectionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/RecipeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/TokenController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/handler/RestApiExceptionHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/account/ActivateRequest.java" beforeDir="false" />
@@ -53,6 +52,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/authorization/TokenClientRequest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/AuthenticationResponse.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/RecipeListResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/RecipeListResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/SignUpResponse.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/exception/account/AlreadyUserExistsException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/exception/account/InvalidEmailVerificationCodeException.java" beforeDir="false" />
@@ -60,6 +60,8 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/model/WebSession.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/repositories/email/EmailVerificationRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/repositories/user/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/RecipeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/RecipeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/RecipeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/RecipeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/contract/account/AccountService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/contract/authorization/AuthorizationIssueRequestDto.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/contract/authorization/AuthorizationIssueResponseDto.java" beforeDir="false" />
@@ -198,11 +200,11 @@
       <recent name="com.idea.auth" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.myexam.controller.response" />
       <recent name="com.myexam.controller.model" />
       <recent name="com.myexam.domain.repositories" />
       <recent name="com.myexam.infrastructure.repository" />
       <recent name="com.myexam.domain.service" />
-      <recent name="com.myexam.controller.response" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MyExamServerApplication">
@@ -344,7 +346,7 @@
       <workItem from="1678239746154" duration="42000" />
       <workItem from="1678239817096" duration="11778000" />
       <workItem from="1678259579318" duration="46665000" />
-      <workItem from="1678613006397" duration="6743000" />
+      <workItem from="1678613006397" duration="9371000" />
     </task>
     <servers />
   </component>
@@ -367,8 +369,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/myexam/controller/RecipeController.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="2" />
+          <line>42</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

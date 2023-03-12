@@ -1,5 +1,6 @@
 package com.myexam.controller;
 
+import com.myexam.controller.response.RecipeGetResponse;
 import com.myexam.controller.response.RecipeListResponse;
 import com.myexam.domain.service.RecipeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,7 +28,7 @@ public class RecipeController {
 
     var result = service.list();
     var response = new RecipeListResponse();
-    response.setRecipe(result);
+    response.setRecipes(result);
 
     // データベース全てのレシピを返す
     return new ResponseEntity(
@@ -34,16 +36,21 @@ public class RecipeController {
             HttpStatus.OK
     );
   }
-//
-//  @GetMapping("recipes/${id}")
-//  public ResponseEntity getById() {
-//
-//    // データベース全てのレシピを返す
-//    return new ResponseEntity(
-//            "Health Check OK",
-//            HttpStatus.OK
-//    );
-//  }
+
+  @GetMapping("recipes/{id}")
+  public ResponseEntity<RecipeGetResponse> getById(@PathVariable String id) {
+
+    var result = service.getById(Long.parseLong(id));
+    var response = new RecipeGetResponse();
+
+    response.setMessage("Recipe details by id");
+    response.setRecipe(result);
+
+    return new ResponseEntity(
+            response,
+            HttpStatus.OK
+    );
+  }
 //
 //  @DeleteMapping("recipes/${id}")
 //  public ResponseEntity delete() {
