@@ -4,7 +4,102 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbcd63a4-1d08-4a44-8926-209ea81cb47b" name="Changes" comment="" />
+    <list default="true" id="bbcd63a4-1d08-4a44-8926-209ea81cb47b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/RecipeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/RecipePostRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/RecipeDeleteResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/RecipeListResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/RecipePatchResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/RecipePostResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/domain/repositories/RecipeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/domain/repositories/entity/RecipeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/RecipeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/RecipeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/config/DispatcherServletCustomConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/config/DynamoDBConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/config/JwtTokenFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/config/UserAuthenticationProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/config/application/JwtConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/AccountController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/AuthorizationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/HealthCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/HealthCheckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/IntrospectionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/TokenController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/handler/RestApiExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/account/ActivateRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/account/SignUpRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/authlete/AbstractOAuthRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/authorization/AuthenticationClientRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/authorization/AuthorizationClientRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/authorization/AuthorizationIssueClientRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/authorization/AuthorizationIssueWithSessionClientRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/authorization/IntrospectionClientRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/authorization/TokenClientRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/AuthenticationResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/SignUpResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/exception/account/AlreadyUserExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/exception/account/InvalidEmailVerificationCodeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/exception/account/UserNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/model/WebSession.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/repositories/email/EmailVerificationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/repositories/user/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/contract/account/AccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/contract/authorization/AuthorizationIssueRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/contract/authorization/AuthorizationIssueResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/contract/authorization/AuthorizationResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/contract/authorization/AuthorizationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/contract/introspection/IntrospectionResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/contract/introspection/IntrospectionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/contract/token/TokenResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/contract/token/TokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/account/AccountServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/account/UserStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/account/domain/object/AuthenticationNextChallenge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/account/domain/object/EmailVerification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/account/domain/object/HashedPassword.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/account/domain/object/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/account/domain/object/VerificationCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/account/domain/object/VerificationNonce.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/account/domain/service/EmailVerificationDomainService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/account/domain/service/EmailVerificationDomainServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/account/domain/service/UserDomainService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/account/domain/service/UserDomainServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/authlete/authorization/AuthorizationServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/authlete/converter/AuthorizationIssueResponseHttpStatusCodeConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/authlete/converter/AuthorizationResponseHttpStatusCodeConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/authlete/converter/IntrospectionResponseHttpStatusCodeConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/authlete/converter/TokenResponseHttpStatusCodeConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/authlete/introspection/IntrospectionServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/impl/authlete/token/TokenServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/infrastructure/externalApi/authlete/AuthorizationHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/infrastructure/externalApi/authlete/AuthorizationIssueHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/infrastructure/externalApi/authlete/IntrospectionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/infrastructure/externalApi/authlete/TokenHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/infrastructure/repositoryImpl/email/EmailVerificationDynamoDBRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/infrastructure/repositoryImpl/email/EmailVerificationEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/infrastructure/repositoryImpl/user/UserDynamoDBRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/infrastructure/repositoryImpl/user/UserEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/module/JwtTokenModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/authlete.properties" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,14 +198,14 @@
       <recent name="com.idea.auth" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.idea.auth.domain.service.impl.account.domain.service.authentication" />
-      <recent name="com.idea.auth.domain.service.impl.account.domain.object" />
-      <recent name="com.idea.auth.domain.exception.account" />
-      <recent name="com.idea.auth.domain.service.impl.account.domain.service" />
-      <recent name="com.idea.auth.domain.service.impl.account" />
+      <recent name="com.myexam.controller.model" />
+      <recent name="com.myexam.domain.repositories" />
+      <recent name="com.myexam.infrastructure.repository" />
+      <recent name="com.myexam.domain.service" />
+      <recent name="com.myexam.controller.response" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.IdeaAuthServerApplication">
+  <component name="RunManager" selected="Spring Boot.MyExamServerApplication">
     <configuration name="AuthorizationServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -178,17 +273,9 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="IdeaAuthServerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="com.idea.auth.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.idea.auth.IdeaAuthServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IdeaAuthServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ACTIVE_PROFILES" value="local" />
-      <module name="auth.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.idea.auth.IdeaAuthServerApplication" />
+    <configuration name="MyExamServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="com.myexam.auth.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.myexam.MyExamServerApplication" />
       <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
         <option name="credential" />
         <option name="region" />
@@ -202,8 +289,7 @@
       <item itemvalue="Gradle.AuthorizationServiceTest" />
       <item itemvalue="Gradle.Tests in 'auth.test'" />
       <item itemvalue="Gradle.Tests in 'com.idea.auth.domain.usecase'" />
-      <item itemvalue="Spring Boot.IdeaAuthServerApplication (1)" />
-      <item itemvalue="Spring Boot.IdeaAuthServerApplication" />
+      <item itemvalue="Spring Boot.MyExamServerApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -258,14 +344,34 @@
       <workItem from="1678239746154" duration="42000" />
       <workItem from="1678239817096" duration="11778000" />
       <workItem from="1678259579318" duration="46665000" />
-      <workItem from="1678613006397" duration="378000" />
+      <workItem from="1678613006397" duration="6743000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:software.amazon.awssdk:dynamodb" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:software.amazon.awssdk:sdk-core" />
+    <option featureType="dependencySupport" implementationName="java:software.amazon.awssdk:dynamodb-enhanced" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+  </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/myexam/controller/RecipeController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="com.authlete.common.dto.AuthorizationIssueResponse" memberName="resultMessage" />

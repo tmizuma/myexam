@@ -3,13 +3,8 @@ env: base
 server:
   port: 8080
 
-springdoc:
-  api-docs:
-    enabled: false
-  swagger-ui:
-    enabled: false
-
-aws:
-  dynamodb:
-    endpoint: ${DYNAMODB_ENDPOINT}
-    region: ${DYNAMODB_REGION}
+spring:
+  datasource:
+    url: jdbc:mysql://35.72.108.107:3306/exam
+    username: admin
+    password: PassW0rd!
