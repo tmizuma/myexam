@@ -1,5 +1,6 @@
 package com.myexam.domain.service;
 
+import com.myexam.controller.request.RecipePostRequest;
 import com.myexam.model.Recipe;
 import java.util.List;
 import org.springframework.stereotype.Service;
@@ -7,11 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public interface RecipeService {
 
-  public void create();
+  List<Recipe> create(RecipePostRequest recipe);
 
-  public void update();
+  List<Recipe> update(RecipePostRequest recipe);
 
-  public void delete();
+  public void delete(Long id);
 
   List<Recipe> list();
 

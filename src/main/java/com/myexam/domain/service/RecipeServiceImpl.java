@@ -1,10 +1,12 @@
 package com.myexam.domain.service;
 
 
+import com.myexam.controller.request.RecipePostRequest;
 import com.myexam.domain.repositories.RecipeRepository;
 import com.myexam.domain.repositories.entity.RecipeEntity;
 import com.myexam.model.Recipe;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -22,17 +24,54 @@ public class RecipeServiceImpl implements RecipeService {
   }
 
   @Override
-  public void create() {
+  public List<Recipe> create(RecipePostRequest recipe) {
+    RecipeEntity entity = new RecipeEntity();
+    entity.setTitle(recipe.getTitle());
+    entity.setMaking_time(recipe.getMaking_time());
+    entity.setServes(recipe.getServes());
+    entity.setIngredients(recipe.getIngredients());
+    entity.setCost(recipe.getCost());
+    entity.setCreated_at(new Date());
+    entity.setUpdated_at(new Date());
+    var result = repository.saveAndFlush(entity);
 
+    var newRecipe = new Recipe();
+    newRecipe.setId(result.getId());
+    newRecipe.setTitle(result.getTitle());
+    newRecipe.setServes(result.getServes());
+    newRecipe.setMaking_time(result.getMaking_time());
+    newRecipe.setCost(result.getCost());
+    List list = new ArrayList<RecipeEntity>();
+    list.add(recipe);
+    return list;
   }
 
   @Override
-  public void update() {
+  public List<Recipe> update(RecipePostRequest recipe) {
+    RecipeEntity entity = new RecipeEntity();
+    entity.setTitle(recipe.getTitle());
+    entity.setMaking_time(recipe.getMaking_time());
+    entity.setServes(recipe.getServes());
+    entity.setIngredients(recipe.getIngredients());
+    entity.setCost(recipe.getCost());
+    entity.setCreated_at(new Date());
+    entity.setUpdated_at(new Date());
+    var result = repository.saveAndFlush(entity);
 
+    var newRecipe = new Recipe();
+    newRecipe.setId(result.getId());
+    newRecipe.setTitle(result.getTitle());
+    newRecipe.setServes(result.getServes());
+    newRecipe.setMaking_time(result.getMaking_time());
+    newRecipe.setCost(result.getCost());
+    List list = new ArrayList<RecipeEntity>();
+    list.add(recipe);
+    return list;
   }
 
   @Override
-  public void delete() {
+  public void delete(Long id) {
+    repository.deleteById(id);
   }
 
   @Override
