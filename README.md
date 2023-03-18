@@ -1,8 +1,24 @@
 # For examination
 
+## 提出前にやること
+
+- .git消す
+
+## デプロイ
+
+```bash
+export AWS_REGION=ap-northeast-1
+export AWS_DEFAULT_PROFILE=personal 
+
+```
+
 ### Usage
 
 ```bash
+docker build -t myexam .
+docker run -p 8080:8080 myexam
+docker stop
+
 
 # OpenAPI UIの表示
 open http://localhost:8080/swagger-ui/index.html
@@ -38,8 +54,3 @@ CREATE DATABASE exam DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 バリデーション
 Exception
 エラーメッセージ
-
-ported for this channel.
-2023-03-18T19:16:37.328865Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
-2023-03-18T19:16:37.328938Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.32'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server - GPL.
-2023-03-18T19:16:49.567281Z 8 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will beremoved in a future release. Please use caching_sha2_password instead'
