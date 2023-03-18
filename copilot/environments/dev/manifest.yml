@@ -17,22 +17,23 @@ network:
          - id: 'subnet-0537c32d1b6accbc1'
 
 http:
-  path: '/'
+  path: '/_health'
 
-tasks:
-  your-app-name-task:
-    count: 1
+image:
+  build: ./Dockerfile
+  port: 80
+
+count: 1
+
+#tasks:
+#  your-app-name-task:
+#    count: 1
 
 # Configure the load balancers in your environment, once created.
 # http:
 #   public:
 #   private:
 
-healthcheck:
-  path: /_health
-  interval: 5s
-  timeout: 2s
-  retries: 3
 
 observability:
   container_insights: false
