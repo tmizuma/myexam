@@ -16,12 +16,12 @@ export AWS_DEFAULT_PROFILE=personal
 
 ```bash
 docker build -t myexam .
-docker run -p 8080:8080 myexam
+docker run -p 80:80 myexam
 docker stop
 
 
 # OpenAPI UIの表示
-open http://localhost:8080/swagger-ui/index.html
+open http://localhost:80/swagger-ui/index.html
 
 ```
 

@@ -1,5 +1,6 @@
 package com.myexam.controller;
 
+import com.myexam.controller.request.RecipePatchRequest;
 import com.myexam.controller.request.RecipePostRequest;
 import com.myexam.controller.response.RecipeDeleteResponse;
 import com.myexam.controller.response.RecipeGetResponse;
@@ -97,13 +98,15 @@ public class RecipeController {
     );
   }
 
-//  @PatchMapping("recipes/${id}")
-//  public ResponseEntity patch() {
-//
-//    // データベース全てのレシピを返す
-//    return new ResponseEntity(
-//            "Health Check OK",
-//            HttpStatus.OK
-//    );
-//  }
+  @PatchMapping("recipes/{id}")
+  public ResponseEntity patch(@PathVariable String id ,@RequestBody RecipePatchRequest req) {
+
+    service.update(Long.parseLong(id), req);
+
+    // データベース全てのレシピを返す
+    return new ResponseEntity(
+            "Health Check OK",
+            HttpStatus.OK
+    );
+  }
 }

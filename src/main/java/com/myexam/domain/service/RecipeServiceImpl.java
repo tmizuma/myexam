@@ -1,6 +1,7 @@
 package com.myexam.domain.service;
 
 
+import com.myexam.controller.request.RecipePatchRequest;
 import com.myexam.controller.request.RecipePostRequest;
 import com.myexam.domain.repositories.RecipeRepository;
 import com.myexam.domain.repositories.entity.RecipeEntity;
@@ -42,12 +43,13 @@ public class RecipeServiceImpl implements RecipeService {
     newRecipe.setMaking_time(result.getMaking_time());
     newRecipe.setCost(result.getCost());
     List list = new ArrayList<RecipeEntity>();
-    list.add(recipe);
+    list.add(newRecipe);
     return list;
   }
 
   @Override
-  public List<Recipe> update(RecipePostRequest recipe) {
+  public List<Recipe> update(long id, RecipePatchRequest recipe) {
+
     RecipeEntity entity = new RecipeEntity();
     entity.setTitle(recipe.getTitle());
     entity.setMaking_time(recipe.getMaking_time());
@@ -65,12 +67,12 @@ public class RecipeServiceImpl implements RecipeService {
     newRecipe.setMaking_time(result.getMaking_time());
     newRecipe.setCost(result.getCost());
     List list = new ArrayList<RecipeEntity>();
-    list.add(recipe);
+    list.add(newRecipe);
     return list;
   }
 
   @Override
-  public void delete(Long id) {
+  public void delete(long id) {
     repository.deleteById(id);
   }
 
@@ -93,7 +95,7 @@ public class RecipeServiceImpl implements RecipeService {
 
 
   @Override
-  public List<Recipe> getById(Long id) {
+  public List<Recipe> getById(long id) {
     var result = repository.getOne(id);
     var recipe = new Recipe();
     recipe.setId(result.getId());
