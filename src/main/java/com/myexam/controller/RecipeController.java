@@ -97,13 +97,13 @@ public class RecipeController {
     );
   }
 
-  @PatchMapping("recipes/${id}")
-  public ResponseEntity patch() {
-
-    // データベース全てのレシピを返す
-    return new ResponseEntity(
-            "Health Check OK",
-            HttpStatus.OK
-    );
-  }
+//  @PatchMapping("recipes/${id}")
+//  public ResponseEntity patch() {
+//
+//    // データベース全てのレシピを返す
+//    return new ResponseEntity(
+//            "Health Check OK",
+//            HttpStatus.OK
+//    );
+//  }
 }
