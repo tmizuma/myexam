@@ -5,6 +5,7 @@ import com.myexam.controller.request.RecipePostRequest;
 import com.myexam.controller.response.RecipeDeleteResponse;
 import com.myexam.controller.response.RecipeGetResponse;
 import com.myexam.controller.response.RecipeListResponse;
+import com.myexam.controller.response.RecipePatchResponse;
 import com.myexam.controller.response.RecipePostResponse;
 import com.myexam.domain.service.RecipeService;
 import jakarta.validation.Valid;
@@ -34,12 +35,9 @@ public class RecipeController {
 
   @GetMapping("/recipes")
   public ResponseEntity<RecipeListResponse> list() {
-
     var result = service.list();
     var response = new RecipeListResponse();
     response.setRecipes(result);
-
-    // データベース全てのレシピを返す
     return new ResponseEntity(
             response,
             HttpStatus.OK
@@ -48,13 +46,10 @@ public class RecipeController {
 
   @GetMapping("recipes/{id}")
   public ResponseEntity<RecipeGetResponse> getById(@PathVariable String id) {
-
     var result = service.getById(Long.parseLong(id));
     var response = new RecipeGetResponse();
-
     response.setMessage("Recipe details by id");
     response.setRecipe(result);
-
     return new ResponseEntity(
             response,
             HttpStatus.OK
@@ -63,35 +58,21 @@ public class RecipeController {
 
   @DeleteMapping("recipes/{id}")
   public ResponseEntity<RecipeDeleteResponse> deleteById(@PathVariable String id) {
-
-    try {
-      service.delete(Long.parseLong(id));
-      var response = new RecipeDeleteResponse();
-      response.setMessage("Recipe successfully removed!");
-      // データベース全てのレシピを返す
-      return new ResponseEntity(
-              response,
-              HttpStatus.OK
-      );
-    } catch (RuntimeException e) {
-      // Todo Error logging
-    }
+    service.delete(Long.parseLong(id));
     var response = new RecipeDeleteResponse();
-    response.setMessage("No Recipe found");
+    response.setMessage("Recipe successfully removed!");
     return new ResponseEntity(
             response,
-            HttpStatus.BAD_REQUEST
+            HttpStatus.OK
     );
   }
 
   @PostMapping("recipes")
-  public ResponseEntity post(@Valid @RequestBody RecipePostRequest req) {
-
+  public ResponseEntity post(@RequestBody RecipePostRequest req) {
     var result = service.create(req);
     var response = new RecipePostResponse();
     response.setMessage("Recipe successfully created!");
     response.setRecipe(result);
-    // データベース全てのレシピを返す
     return new ResponseEntity(
             response,
             HttpStatus.OK
@@ -99,13 +80,12 @@ public class RecipeController {
   }
 
   @PatchMapping("recipes/{id}")
-  public ResponseEntity patch(@PathVariable String id ,@RequestBody RecipePatchRequest req) {
-
-    service.update(Long.parseLong(id), req);
-
-    // データベース全てのレシピを返す
+  public ResponseEntity<RecipePatchResponse> patch(@PathVariable String id ,@Valid @RequestBody RecipePatchRequest req) {
+    var response = new RecipePatchResponse();
+    response.setRecipe(service.update(Long.parseLong(id), req));
+    response.setMessage("Recipe successfully updated!");
     return new ResponseEntity(
-            "Health Check OK",
+            response,
             HttpStatus.OK
     );
   }

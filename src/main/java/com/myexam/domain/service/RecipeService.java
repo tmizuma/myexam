@@ -13,7 +13,7 @@ public interface RecipeService {
 
   List<Recipe> update(long id, RecipePatchRequest recipe);
 
-  public void delete(long id);
+  void delete(long id);
 
   List<Recipe> list();
 

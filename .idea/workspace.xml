@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cf143cc-e912-4962-a690-8056ea4867f7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myexam/exception/RecipeDuplicatedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/RecipeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/RestApiExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/RestApiExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/RecipePatchRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/RecipePatchRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/RecipePostRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/RecipePostRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/RecipePatchResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/response/RecipePatchResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/repositories/RecipeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/domain/repositories/RecipeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/RecipeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/RecipeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/RecipeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/domain/service/RecipeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/model/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/model/Recipe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +68,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.myexam.exception" />
       <recent name="com.myexam.controller.request" />
     </key>
   </component>
@@ -88,26 +101,11 @@
       <workItem from="1679165584161" duration="2597000" />
       <workItem from="1679168468005" duration="1601000" />
       <workItem from="1679170179098" duration="10027000" />
+      <workItem from="1679186701308" duration="4087000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/myexam/controller/RecipeController.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/myexam/domain/service/RecipeServiceImpl.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
