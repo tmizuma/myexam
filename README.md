@@ -7,8 +7,6 @@
 ## デプロイ
 
 ```bash
-export AWS_REGION=ap-northeast-1
-export AWS_DEFAULT_PROFILE=personal 
 
 ```
 
@@ -17,8 +15,13 @@ export AWS_DEFAULT_PROFILE=personal
 ```bash
 docker build -t myexam .
 docker run -p 80:80 myexam
-docker stop
-
+export AWS_ACCOUNT_ID=449307728240
+export AWS_REGION=ap-northeast-1
+aws ecr get-login-password | docker login --username AWS --password-stdin https://${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
+./gradlew --refresh-dependencies
+./gradlew jibDockerBuild
+docker tag exam 449307728240.dkr.ecr.ap-northeast-1.amazonaws.com/exam:latest
+docker push 449307728240.dkr.ecr.ap-northeast-1.amazonaws.com/exam:latest
 
 # OpenAPI UIの表示
 open http://localhost:80/swagger-ui/index.html
