@@ -3,7 +3,9 @@ package com.myexam.domain.service.user;
 import com.myexam.controller.request.user.SignUpRequest;
 import com.myexam.domain.repositories.UserRepository;
 import com.myexam.domain.repositories.entity.UserEntity;
+import com.myexam.exception.AuthenticationException;
 import com.myexam.exception.UserDuplicatedException;
+import com.myexam.exception.UserNotFoundException;
 import com.myexam.model.User;
 import java.util.Base64;
 import java.util.Date;
@@ -37,7 +39,7 @@ public class UserServiceImpl implements UserService {
     userEntity.setUser_id(req.getUser_id());
     userEntity.setNickname(req.getNickname());
     userEntity.setComment(req.getComment());
-    userEntity.setPassword(encode(req.getComment()));
+    userEntity.setPassword(encode(req.getPassword()));
     userEntity.setUpdated_at(new Date());
     userEntity.setCreated_at(new Date());
     repository.save(userEntity);
@@ -45,7 +47,44 @@ public class UserServiceImpl implements UserService {
     return new User(req.getUser_id(), req.getComment());
   }
 
+  @Override
+  public User getById(String userId, String authorization) {
+    if (authorization.split(" ").length != 2) {
+      throw new AuthenticationException("Authorization Failed");
+    }
+    String rawAuthorizationData = decode(authorization.split(" ")[1]);
+    String decodedUserId = "";
+    String decodedPassword = "";
+
+    try {
+       decodedUserId = rawAuthorizationData.split(":")[0];
+       decodedPassword = rawAuthorizationData.split(":")[1];
+    } catch (RuntimeException e) {
+      // 不正なヘッダーフォーマットのため
+      throw new AuthenticationException("Authorization Failed");
+    }
+    if (!userId.equals(decodedUserId)) {
+      new AuthenticationException("Authorization Failed");
+    }
+
+    Optional<UserEntity> user = repository.findById(userId);
+    if (user.isEmpty()) {
+      throw new UserNotFoundException("No User found");
+    }
+
+    if (!decode(user.get().getPassword()).equals(decodedPassword)) {
+      // パスワードが一致しないため
+      throw new AuthenticationException("Authorization Failed");
+    }
+    return new User(user.get().getUser_id(), user.get().getComment());
+  }
+
+
   private String encode(String rawData) {
     return Base64.getEncoder().encodeToString(rawData.getBytes());
+  }
+
+  private String decode(String encodedData) {
+    return new String(Base64.getDecoder().decode(encodedData));
   }
 }
