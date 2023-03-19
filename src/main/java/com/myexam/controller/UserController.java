@@ -53,7 +53,7 @@ public class UserController {
     }
     var result = service.getById(user_id, authorization);
     var response = new UserResponse();
-    response.setMessage("User details by use_id");
+    response.setMessage("User details by user_id");
     response.setUser(result);
     return new ResponseEntity(
             response,

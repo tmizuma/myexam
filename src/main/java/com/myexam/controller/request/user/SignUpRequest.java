@@ -9,11 +9,11 @@ import org.hibernate.validator.constraints.Length;
 @Data
 public class SignUpRequest {
 
-  @NotNull(message = "required user_id and password")
+  @NotNull(message = "Account creation failed")
   @NotBlank(message = "required user_id and password")
   @Length(min=6, max=20, message = "The user_id should have a length ranging from 6 to 20 characters.")
   String user_id;
-  @NotNull(message = "required user_id and password")
+  @NotNull(message = "Account creation failed")
   @NotBlank(message = "required user_id and password")
   @Length(min=8, max=20, message = "The password should have a length ranging from 6 to 20 characters.")
   String password;
