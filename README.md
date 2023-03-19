@@ -13,6 +13,7 @@
 ### Usage
 
 ```bash
+./gradlew clean build -x test
 docker build -t myspringboot .
 docker run -p 80:80 myspringboot
 export AWS_ACCOUNT_ID=449307728240
