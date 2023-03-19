@@ -23,9 +23,6 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
-    // SpringBoot - Java AWS SDK 2 DynamoDB Enhanced Client and devtools problem
-    // https://stackoverflow.com/questions/61556638/springboot-java-aws-sdk-2-dynamodb-enhanced-client-and-devtools-problem/64350067#64350067
-    // developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -33,9 +30,6 @@ dependencies {
     implementation group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.3'
     runtimeOnly 'mysql:mysql-connector-java'
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
-    implementation(platform("software.amazon.awssdk:bom:2.18.10"))
-    implementation("software.amazon.awssdk:dynamodb")
-    implementation("software.amazon.awssdk:dynamodb-enhanced")
     implementation group: 'org.hibernate', name: 'hibernate-validator', version: '8.0.0.Final'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 }
