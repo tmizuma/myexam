@@ -1,8 +1,8 @@
 package com.myexam.controller;
 
 import com.myexam.controller.response.ExceptionResponse;
-import com.myexam.exception.RecipeDuplicatedException;
-import com.myexam.exception.RecipeNotFoundException;
+import com.myexam.controller.response.RuntimeExceptionResponse;
+import com.myexam.exception.UserDuplicatedException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -17,14 +17,16 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public class RestApiExceptionHandler extends ResponseEntityExceptionHandler {
 
   /**
-   * 対象の要素が見つからなかった場合のハンドリング
+   * 対象の要素が重複場合のハンドリング
    * @param exception
    * @return
    */
-  @ExceptionHandler(RecipeNotFoundException.class)
-  protected ResponseEntity handleRecipeNotFoundException(RecipeNotFoundException exception) {
+  @ExceptionHandler(UserDuplicatedException.class)
+  protected ResponseEntity handleUserDuplicatedException(UserDuplicatedException exception) {
+    String message = exception.getMessage().split("/")[0];
+    String cause = exception.getMessage().split("/")[1];
     return new ResponseEntity(
-            new ExceptionResponse(exception.getMessage()),
+            new RuntimeExceptionResponse(message, cause),
             HttpStatus.NOT_FOUND // ToDo: HTTP Status Codeをチェック
     );
   }

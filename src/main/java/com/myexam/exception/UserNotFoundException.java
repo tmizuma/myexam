@@ -1,11 +1,11 @@
 package com.myexam.exception;
 
-public class RecipeNotFoundException extends RuntimeException {
+public class UserNotFoundException extends RuntimeException {
   public static final long serialVersionUID = 1L;
 
   private String message;
 
-  public RecipeNotFoundException(String message) {
+  public UserNotFoundException(String message) {
     this.message = message;
   }
 

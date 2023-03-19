@@ -1,11 +1,11 @@
 package com.myexam.domain.repositories;
 
-import com.myexam.domain.repositories.entity.RecipeEntity;
+import com.myexam.domain.repositories.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RecipeRepository extends JpaRepository<RecipeEntity, Long> {
+public interface UserRepository extends JpaRepository<UserEntity, String> {
 
 
 }

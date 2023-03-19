@@ -11,30 +11,18 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "recipes")
-public class RecipeEntity {
+@Table(name = "users")
+public class UserEntity {
 
-  /**
-   * ID
-   */
   @Id
-  @Column(name = "id")
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
-  @Column(name = "title")
-  private String title;
-  @Column(name = "making_time")
-  private String making_time;
-
-  @Column(name = "serves")
-  private String serves;
-
-  @Column(name = "ingredients")
-  private String ingredients;
-
-  @Column(name = "cost")
-  private long cost;
-
+  @Column(name = "user_id")
+  private String user_id;
+  @Column(name = "password")
+  private String password;
+  @Column(name = "nickname")
+  private String nickname;
+  @Column(name = "comment")
+  private String comment;
   @Column(name = "updated_at")
   private Date updated_at;
   @Column(name = "created_at")
