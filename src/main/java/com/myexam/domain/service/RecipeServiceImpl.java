@@ -5,10 +5,12 @@ import com.myexam.controller.request.RecipePatchRequest;
 import com.myexam.controller.request.RecipePostRequest;
 import com.myexam.domain.repositories.RecipeRepository;
 import com.myexam.domain.repositories.entity.RecipeEntity;
+import com.myexam.exception.RecipeNotFoundException;
 import com.myexam.model.Recipe;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -50,14 +52,19 @@ public class RecipeServiceImpl implements RecipeService {
   @Override
   public List<Recipe> update(long id, RecipePatchRequest recipe) {
 
-    RecipeEntity entity = new RecipeEntity();
+    Optional<RecipeEntity> existingRecipe = repository.findById(id);
+
+    if (existingRecipe.isEmpty()) {
+      throw new RecipeNotFoundException("Recipe id is not found");
+    }
+    var entity = existingRecipe.get();
     entity.setTitle(recipe.getTitle());
     entity.setMaking_time(recipe.getMaking_time());
     entity.setServes(recipe.getServes());
     entity.setIngredients(recipe.getIngredients());
     entity.setCost(recipe.getCost());
-    entity.setCreated_at(new Date());
     entity.setUpdated_at(new Date());
+    //    entity.setCreated_at(new Date()); // 作成日付は更新しない
     var result = repository.saveAndFlush(entity);
 
     var newRecipe = new Recipe();
