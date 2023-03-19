@@ -1,8 +1,6 @@
 package com.myexam.controller;
 
 import com.myexam.controller.request.user.SignUpRequest;
-import com.myexam.controller.response.RuntimeExceptionResponse;
-import com.myexam.controller.response.RuntimeExceptionWithoutCauseResponse;
 import com.myexam.controller.response.user.SignUpResponse;
 import com.myexam.controller.response.user.UserResponse;
 import com.myexam.domain.service.user.UserService;
@@ -34,7 +32,7 @@ public class UserController {
 
   @PostMapping("signup")
   public ResponseEntity post(@RequestBody @Validated SignUpRequest req) {
-    // ASCII/空白文字のバリデーション
+    // ToDo: ASCII/空白文字のバリデーション
     var result = service.signup(req);
     var response = new SignUpResponse();
     response.setMessage("Account successfully created");
@@ -59,7 +57,6 @@ public class UserController {
             response,
             HttpStatus.OK
     );
-
   }
 
 }

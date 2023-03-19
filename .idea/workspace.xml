@@ -7,7 +7,6 @@
     <list default="true" id="5cf143cc-e912-4962-a690-8056ea4867f7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/user/SignUpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myexam/controller/request/user/SignUpRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
