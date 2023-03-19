@@ -20,7 +20,7 @@ export AWS_REGION=ap-northeast-1
 aws ecr get-login-password | docker login --username AWS --password-stdin https://${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
 ./gradlew --refresh-dependencies
 ./gradlew jibDockerBuild
-docker tag exam 449307728240.dkr.ecr.ap-northeast-1.amazonaws.com/exam:latest
+docker tag myexam 449307728240.dkr.ecr.ap-northeast-1.amazonaws.com/exam:latest
 docker push 449307728240.dkr.ecr.ap-northeast-1.amazonaws.com/exam:latest
 
 # OpenAPI UIの表示
